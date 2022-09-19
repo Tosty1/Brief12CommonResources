@@ -12,6 +12,8 @@
     - https://www.ntweekly.com/2021/02/02/add-a-secret-to-azure-key-vault-with-terraform/
 - service principal
     - voir si on peut se connecter avec ca à mariadb
+    - creer une branche dans Active directory pour mariadb et tester
+    - attention à ne pas casser le systeme poru tout le monde
 
 ---
 
