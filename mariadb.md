@@ -49,3 +49,10 @@ provider "azurerm" {
 # GRANT ALL on $database_wp_name_here.* to '$username_wp'@'$database_wp_name_here' identified by '$password_wp';
 # flush privileges;
 # exit;
+
+
+--- 
+### Nommage
+CamilleDeSousaMathieu — Today at 16:45
+juste je vous demande que tant qu'on a pas mit en place les variables de bien nommé le group de ressource Brief12CommonResources
+et il va sans doute qu'on crée un réseau, alors je propose Brief12CommonResourcesSubnet
