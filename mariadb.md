@@ -27,4 +27,8 @@ sur github
 - Matomi boss
 
 ---
-- repartition des taches :
+### repartition des taches :
+- creation des tables en script terraform (bash ou az si pas mieu) :
+    - Matomi, Alain
+- boucle terraform ou bash pour generation des pass et users : 
+    - Driton, Jeremy
