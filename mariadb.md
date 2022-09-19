@@ -43,13 +43,12 @@ provider "azurerm" {
   features {}
 }
 
-# creation de wordpressdb et utilisateur si elle n'existe pas
-# CREATE DATABASE IF NOT EXISTS $database_wp_name_here default character set utf8 collate utf8_unicode_ci;
-# CREATE USER IF NOT EXISTS '$username_wp'@'$database_wp_name_here' IDENTIFIED BY '$password_wp';
-# GRANT ALL on $database_wp_name_here.* to '$username_wp'@'$database_wp_name_here' identified by '$password_wp';
-# flush privileges;
-# exit;
-
+### creation de wordpressdb et utilisateur si elle n'existe pas
+CREATE DATABASE IF NOT EXISTS $database_wp_name_here default character set utf8 collate utf8_unicode_ci;
+CREATE USER IF NOT EXISTS '$username_wp'@'$database_wp_name_here' IDENTIFIED BY '$password_wp';
+GRANT ALL on $database_wp_name_here.* to '$username_wp'@'$database_wp_name_here' identified by '$password_wp';
+flush privileges;
+exit;
 
 --- 
 ### Nommage
