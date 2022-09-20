@@ -7,12 +7,8 @@ sudo touch instructionsql.sql
 #sudo mariadb --user=$ADMIN --password=$ADMINPASS --host=$B12MARIADB < instructionsql.sql > output.tab
 
 
-# injection requete creation db et user 
-sudo echo "CREATE DATABASE IF NOT EXISTS $database_wp_name_here default character set utf8 collate utf8_unicode_ci;" >> instructionsql.sql
-sudo echo "CREATE USER IF NOT EXISTS '$username_wp'@'$database_wp_name_here' IDENTIFIED BY '$password_wp';" >> instructionsql.sql
-sudo echo "GRANT ALL on $database_wp_name_here.* to '$username_wp'@'$database_wp_name_here' identified by '$password_wp';" >> instructionsql.sql
-# flush privileges;
-# exit;
+
+
 
 
 
@@ -24,6 +20,11 @@ read nbdb
 Create_db (){
 	echo $componomdb
 
+    # injection requete creation db et user 
+sudo echo "CREATE DATABASE IF NOT EXISTS $componomdb default character set utf8 collate utf8_unicode_ci;" >> instructionsql.sql
+sudo echo "CREATE USER IF NOT EXISTS '$componomuser'@'$componomdb' IDENTIFIED BY '$componomuserpass';" >> instructionsql.sql
+sudo echo "GRANT ALL on $componomdb.* to '$componomuser'@'$componomdb' identified by '$componomuserpass';" >> instructionsql.sql
+
 }
 
 Nombre_db (){
@@ -31,19 +32,29 @@ Nombre_db (){
 	while [ $f -le $nbdb ]
 	do	
 		componomdb=$nomdb$f"DEV"
+		componomuser=$componomdb
+		componomuserpass=$componomuser"pass"
 		Create_db
 		componomdb=$nomdb$f"PROD"
+		componomuser=$componomdb
+		componomuserpass=$componomuser"pass"
 		Create_db
 		f=$((f+1))
 	done
 }
 
+Sqlfin(){
+#finalisation du fichier d'instruction sql
+echo "flush privileges;" >> instructionsql.sql
+echo "exit;" >> instructionsql.sql
+#connexion à mariadb et injection du fichier instruction sql
+mariadb --user=ADMIN --password=ADMINPASS --host=brief12mariadb.mariadb.database.azure.com < instructionsql.sql > output.tab
+}
+
 MAIN(){
-	Create_db
 	Nombre_db
+    Sqlfin
+
 }
 
 MAIN
-
-#connexion à mariadb et injection du fichier instruction sql
-sudo mariadb --user=ADMIN --password=ADMINPASS --host=brief12mariadb.mariadb.database.azure.com < instructionsql.sql > output.tab
