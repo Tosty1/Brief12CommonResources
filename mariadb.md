@@ -55,3 +55,5 @@ exit;
 CamilleDeSousaMathieu — Today at 16:45
 juste je vous demande que tant qu'on a pas mit en place les variables de bien nommé le group de ressource Brief12CommonResources
 et il va sans doute qu'on crée un réseau, alors je propose Brief12CommonResourcesSubnet
+
+dr
