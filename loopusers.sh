@@ -1,4 +1,6 @@
 #!/bin/bash
+
+
 nomuser=Brief12-groupe
 echo "Nombre de user"
 read nbuser
@@ -6,6 +8,7 @@ read nbuser
 
 Create_user (){
 	echo $componomuser
+	echo $componomuserpass
 }
 
 Nombre_user (){
@@ -13,6 +16,7 @@ Nombre_user (){
 	while [ $f -le $nbuser ]
 	do	
 		componomuser=$nomuser$f
+		componomuserpass=$nomuser"pass"$f
 		Create_user
 		f=$((f+1))
 	done
