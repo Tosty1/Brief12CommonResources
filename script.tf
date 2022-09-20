@@ -1,10 +1,10 @@
-
-
+#######################################################################
+#provider
 terraform {
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = "3.23.0"
+      version = "3.21.1"
     }
   }
 }
@@ -16,22 +16,17 @@ provider "azurerm" {
   }
 }
 
-
 ##################################################################
 #Variables for terraform
 
 variable "resource_group_name" {
   type = string
-  description = "Entrer le nom de groupe de ressource?"
-  
+  description = "Entrer le nom de groupe de ressource?"  
 }
-
-
 
 variable "azurerm_mariadb_server" {
   type = string
-  description = "Entrer votre nom de Mariadb?"
-  
+  description = "Entrer votre nom de Mariadb?"  
 }
 #################################################################
 
@@ -40,11 +35,11 @@ variable "azurerm_mariadb_server" {
 # Creation d'un groupe de ressource
 resource "azurerm_resource_group" "p20cloud" {
   name     = var.resource_group_name
-  location = "West Europe"
+  location = var.resource_group_location
 }
 
 
-# Creation d'un base de donnés
+# Creation d'une base de données mariadb
 resource "azurerm_mariadb_server" "p20cloud" {
   name                = var.azurerm_mariadb_server
   location            = azurerm_resource_group.p20cloud.location
