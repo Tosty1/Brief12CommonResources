@@ -52,7 +52,9 @@ exit;
 
 --- 
 ### Nommage
-CamilleDeSousaMathieu — Today at 16:45
+CamilleDeSousaMathieu
 juste je vous demande que tant qu'on a pas mit en place les variables de bien nommé le group de ressource Brief12CommonResources
 et il va sans doute qu'on crée un réseau, alors je propose Brief12CommonResourcesSubnet
-
+- providers.tf  avec version 3.21.1
+- mariadb name sans tiret
+- dans query sql ne pas mettre de guillemet sauf pour les passwords
