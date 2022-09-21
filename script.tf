@@ -35,7 +35,7 @@ locals {
 
   location          = "West Europe"
   namemariadb       = "mariadbp20cloud"
-  resourcegroupname = "driton_test"
+  resourcegroupname = "p20cloud-test"
 }
 
 #################################
