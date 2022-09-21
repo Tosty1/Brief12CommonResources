@@ -6,9 +6,11 @@ variable "resource_group_name" {
 
 variable "resource_group_location" {
 
-  default = "West Europe"
+  default = "westeurope"
 
 }
+
+#variable pour le groupe service bus
 
 variable "servicebus_namespace" {
 
