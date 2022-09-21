@@ -3,7 +3,7 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.21.1"
     }
   }
@@ -12,7 +12,7 @@ terraform {
 provider "azurerm" {
   # Configuration options
   features {
-    
+
   }
 }
 
@@ -33,9 +33,9 @@ provider "azurerm" {
 
 locals {
 
-  location="West Europe"
-  namemariadb="p20cloudmariadb"
-  resourcegroupname="dritontest"
+  location          = "West Europe"
+  namemariadb       = "mariadbp20cloud"
+  resourcegroupname = "driton_test"
 }
 
 #################################
@@ -67,7 +67,7 @@ resource "azurerm_resource_group" "p20cloud" {
 
 
 # Creation d'une base de données mariadb
-resource "azurerm_mariadb_server" "p20cloud" {
+resource "azurerm_mariadb_server" "database" {
   name                = local.namemariadb
   location            = local.location
   resource_group_name = local.resourcegroupname
