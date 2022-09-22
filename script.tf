@@ -3,7 +3,7 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.21.1"
     }
   }
@@ -12,38 +12,65 @@ terraform {
 provider "azurerm" {
   # Configuration options
   features {
-    
+
   }
 }
 
 ##################################################################
-#Variables for terraform
+#Variables
 
-variable "resource_group_name" {
-  type = string
-  description = "Entrer le nom de groupe de ressource?"  
+# variable "resource_group_name" {
+#   type = string
+#   description = "Entrer le nom de groupe de ressource?"  
+# }
+
+# variable "azurerm_mariadb_server" {
+#   type = string
+#   description = "Entrer votre nom de Mariadb?"  
+# }
+###################################################################
+#Local variables
+
+locals {
+
+  location          = "West Europe"
+  namemariadb       = "mariadbp20cloud"
+  resourcegroupname = "p20cloud-test"
 }
 
-variable "azurerm_mariadb_server" {
-  type = string
-  description = "Entrer votre nom de Mariadb?"  
+#################################
+#Loop count variables
+#################################
+
+variable "vm_name_pfx" {
+  description = "VM Names"
+  default     = "test-vm-"
+  type        = string
 }
+
+variable "vm_count" {
+  description = "Number of Virtual Machines"
+  default     = 3
+  type        = string
+}
+
+
 #################################################################
 
 
 
 # Creation d'un groupe de ressource
 resource "azurerm_resource_group" "p20cloud" {
-  name     = var.resource_group_name
-  location = var.resource_group_location
+  name     = local.resourcegroupname
+  location = local.location
 }
 
 
 # Creation d'une base de données mariadb
-resource "azurerm_mariadb_server" "p20cloud" {
-  name                = var.azurerm_mariadb_server
-  location            = azurerm_resource_group.p20cloud.location
-  resource_group_name = var.resource_group_name
+resource "azurerm_mariadb_server" "database" {
+  name                = local.namemariadb
+  location            = local.location
+  resource_group_name = local.resourcegroupname
 
   sku_name = "B_Gen5_2"
 
