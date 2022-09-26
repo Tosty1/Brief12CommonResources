@@ -1,6 +1,6 @@
 # buying a domain name
 
-![1.png](../https://raw.githubusercontent.com/P20CloudAzure/Brief12CommonResources/Sendgrid/images/1.png)
+https://raw.githubusercontent.com/P20CloudAzure/Brief12CommonResources/Sendgrid/images/1.png
 
 # creating the app service domain
 
