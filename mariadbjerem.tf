@@ -17,7 +17,7 @@ provider "azurerm" {
 #Variables for terraform
 
 locals {
-  resource_group        = "perso_jeremy"
+  resource_group        = "perso_driton"
   location              = "northeurope"
   mariadb_name          = "mariadbtest"
   mariadb_user          = "jermtest"
@@ -55,7 +55,7 @@ resource "azurerm_mariadb_server" "p20cloud" {
 
 
 #Creation d'une base de donnée mariadb
-resource "azurerm_mariadb_database" "P20cloud" {
+resource "azurerm_mariadb_database" "P21cloud" {
   name                = "database_test"
   resource_group_name = local.resource_group
   server_name         = local.mariadb_name
@@ -64,11 +64,11 @@ resource "azurerm_mariadb_database" "P20cloud" {
 }
 
 
-resource "mariadb_user" "P20cloud" {
+resource "mariadb_user" "P21cloud" {
   user = local.mariadb_user
 }
 
-resource "mariadb_user_password" "P20cloud" {
+resource "mariadb_user_password" "P21cloud" {
   user    = local.mariadb_user
   pgp_key = local.mariadb_user_password
 }
