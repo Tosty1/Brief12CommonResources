@@ -8,13 +8,17 @@ location = var.resource_group_location
 # https://docs.sendgrid.com/api-reference/api-key-permissions/api-key-permissions#mail
 resource "sendgrid_api_key" "api_key" {
     name   = var.api_key
-    scopes = [
+    scopes =
+     "api_keys.create",
+     "api_keys.delete",
+     "api_keys.read",
+     "api_keys.update"
      "mail.batch.create",
      "mail.batch.delete",
      "mail.batch.read",
      "mail.batch.update",
      "mail.send"
-    ] 
+     
 }
 
 
