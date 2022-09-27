@@ -4,10 +4,17 @@ name     = var.resource_group_name
 location = var.resource_group_location
 }
 
-
+# whit this code the API will be able just to send emails  if you need to add another options go the website 
+# https://docs.sendgrid.com/api-reference/api-key-permissions/api-key-permissions#mail
 resource "sendgrid_api_key" "api_key" {
     name   = var.api_key
-
+    scopes = [
+     "mail.batch.create",
+     "mail.batch.delete",
+     "mail.batch.read",
+     "mail.batch.update",
+     "mail.send"
+    ] 
 }
 
 
