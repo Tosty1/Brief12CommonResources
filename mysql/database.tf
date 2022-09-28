@@ -3,8 +3,8 @@
 
 resource "azurerm_mysql_server" "p20cloud" {
   name                = "${var.resource_pfx}mysql"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  resource_group_name = var.resource_group_name
+  location            = var.resource_group_location
 
   sku_name = "GP_Gen5_2"
 
@@ -17,7 +17,7 @@ resource "azurerm_mysql_server" "p20cloud" {
   version                      = "5.7"
   ssl_enforcement_enabled      = true
 
-  depends_on = [azurerm_resource_group.rg]
+  depends_on = [azurerm_resource_group.p20cloud]
 }
 
 #######################################################################
