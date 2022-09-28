@@ -9,4 +9,4 @@
 >- Get it started
 
 ## Graph
-![graph.png](/images/graph.png)
+![graph.png](/mysql/images/graph.png)
