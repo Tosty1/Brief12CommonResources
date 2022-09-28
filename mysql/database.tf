@@ -1,4 +1,4 @@
-#######################################################################
+
 # Creation mysql server
 
 resource "azurerm_mysql_server" "p20cloud" {
@@ -17,7 +17,7 @@ resource "azurerm_mysql_server" "p20cloud" {
   version                      = "5.7"
   ssl_enforcement_enabled      = true
 
-  depends_on = [var.resource_group_name]
+  depends_on = [azurerm_resource_group.rg]
 }
 
 #######################################################################
@@ -32,6 +32,7 @@ resource "azurerm_mysql_firewall_rule" "p20cloud" {
 
   depends_on = [azurerm_mysql_server.p20cloud]
 }
+
 resource "azurerm_mysql_firewall_rule" "p20cloud2" {
   name                = "allow_access"
   resource_group_name = var.resource_group_name
@@ -99,11 +100,14 @@ resource "mysql_grant" "p20clouddev" {
   count      = var.database_count
 
   depends_on = [mysql_user.p20clouddev, azurerm_mysql_database.p20clouddev]
+
 # alimentation du fichier texte avec infos login
+ 
   provisioner "local-exec" {
   command = "echo user '${var.resource_pfx}devuser${format("%02d",count.index+1)}  database ${var.resource_pfx}dev${format("%02d",count.index+1)} password ${random_string.dbpassword[count.index].result}' >> infodb.txt"
   }
 }
+
 resource "mysql_grant" "p20cloudprod" {
   user       = "${var.resource_pfx}produser${format("%02d",count.index+1)}"
   host       = "%"
@@ -112,7 +116,9 @@ resource "mysql_grant" "p20cloudprod" {
   count      = var.database_count
 
   depends_on = [mysql_user.p20cloudprod, azurerm_mysql_database.p20cloudprod]
+
 # alimentation du fichier texte avec infos login
+
   provisioner "local-exec" {
   command = "echo user '${var.resource_pfx}produser${format("%02d",count.index+1)}  database ${var.resource_pfx}prod${format("%02d",count.index+1)}  password ${random_string.dbpassword[count.index+10].result}' >> infodb.txt"
   }
@@ -120,16 +126,10 @@ resource "mysql_grant" "p20cloudprod" {
 
 #######################################################################
 # Creation des passwords
+
 resource "random_string" "dbpassword" {
   length  = 15
   special = false
   count   = 20
 }
 
-# resource "null_resource" "pourexporter" {
-#   depends_on  = [random_string.dbpassword]
-#   count = var.database_count
-#   provisioner "local-exec" {
-#   command = "echo 'user' ${random_string.dbpassword[count.index].result} >> testecho.txt"
-#   }
-# }
