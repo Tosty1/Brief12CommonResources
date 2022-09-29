@@ -1,3 +1,7 @@
+##pré-requis
+###Api key ADMIN à crée et rajouter dans les config du providers (sendgrid)
+
+
 # buy a domain name
 
 ![1.png](https://raw.githubusercontent.com/P20CloudAzure/Brief12CommonResources/Sendgrid/images/1.png)
