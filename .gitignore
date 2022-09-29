@@ -30,3 +30,6 @@ override.tf.json
 
 # fichier avec info sensible
 infodb.txt
+
+#certificat
+BaltimoreCyberTrustRoot.*

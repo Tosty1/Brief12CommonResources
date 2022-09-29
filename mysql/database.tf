@@ -135,8 +135,22 @@ resource "random_string" "dbpassword" {
 
 resource "null_resource" "pourexporter" {
   depends_on  = [random_string.dbpassword]
+  triggers = {
+    "always_on" = "${timestamp()}"
+  }
 # alimentiation du fichier texte avec info superuser
   provisioner "local-exec" {
-    command = "echo 'Admin-login ${var.admin_login}     Admin-password ${random_string.dbpassword[20].result}' > infodb.txt"
+    command = "echo 'Admin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=BaltimoreCyberTrustRoot.crt.pem' > infodb.txt"
+  }
+}
+#######################################################################
+# Ajout du certificat
+resource "null_resource" "mycert" {
+  depends_on = [azurerm_mysql_firewall_rule.p20cloud]
+  triggers = {
+    "always_on" = "${timestamp()}"
+  }
+  provisioner "local-exec" {
+    command = "curl https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem > BaltimoreCyberTrustRoot.crt.pem"
   }
 }
