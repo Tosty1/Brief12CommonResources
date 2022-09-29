@@ -96,7 +96,7 @@ resource "mysql_grant" "p20clouddev" {
   user       = "${var.resource_pfx}devuser${format("%02d", count.index + 1)}"
   host       = "%"
   database   = "${var.resource_pfx}dev${format("%02d", count.index + 1)}"
-  privileges = ["SELECT", "UPDATE", "DELETE", "EXECUTE", "INSERT"]
+  privileges = ["SELECT", "UPDATE", "DELETE", "EXECUTE", "INSERT", "CREATE"]
   count      = var.database_count
 
   depends_on = [mysql_user.p20clouddev, azurerm_mysql_database.p20clouddev]
