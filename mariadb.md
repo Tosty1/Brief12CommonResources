@@ -9,6 +9,11 @@
 
 ---
 ## plan initial
+- le 26/09/2022 :
+![2609](https://simplonformations.sharepoint.com/sites/P20-AdminCloudLyon/Documents%20partages/General/Les%20briefs/Brief12/travail%20fin%20brief12%20partie%201.png)
+- le 28/09/2022 :
+![2809](https://simplonformations.sharepoint.com/sites/P20-AdminCloudLyon/Documents%20partages/General/Les%20briefs/Brief12/groups%20fin%20de%20brief12.png)
+
 ### sur terraform:
 - commande de creation de ressource Mariadb 
 - commandes de creation des tables dans Mariadb 
