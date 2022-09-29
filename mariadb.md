@@ -1,5 +1,14 @@
-## notes de groupe Mariadb
+# notes de groupe Mariadb
+## Reste à faire : le 29/09/2022
+- doc mysql production => Alain
+- à determiner :
+    - suppression des parametres ssl mysql pour faciliter cicd az devops futur
 
+
+
+
+---
+## plan initial
 ### sur terraform:
 - commande de creation de ressource Mariadb 
 - commandes de creation des tables dans Mariadb 
