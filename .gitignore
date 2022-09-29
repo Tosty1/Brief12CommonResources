@@ -32,4 +32,4 @@ override.tf.json
 infodb.txt
 
 #certificat
-BaltimoreCyberTrustRoot.*
+DigiCertGlobalRootG2.*

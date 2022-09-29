@@ -134,13 +134,13 @@ resource "random_string" "dbpassword" {
 }
 
 resource "null_resource" "pourexporter" {
-  depends_on  = [random_string.dbpassword]
+  depends_on = [random_string.dbpassword]
   triggers = {
     "always_on" = "${timestamp()}"
   }
-# alimentiation du fichier texte avec info superuser
+  # alimentiation du fichier texte avec info superuser
   provisioner "local-exec" {
-    command = "echo 'Admin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=BaltimoreCyberTrustRoot.crt.pem' > infodb.txt"
+    command = "echo 'Admin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=DigiCertGlobalRootG2.crt.pem' > infodb.txt"
   }
 }
 #######################################################################
@@ -151,6 +151,6 @@ resource "null_resource" "mycert" {
     "always_on" = "${timestamp()}"
   }
   provisioner "local-exec" {
-    command = "curl https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem > BaltimoreCyberTrustRoot.crt.pem"
+    command = "curl https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt.pem > DigiCertGlobalRootG2.crt.pem"
   }
 }
