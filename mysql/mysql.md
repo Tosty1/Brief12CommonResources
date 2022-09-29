@@ -1,12 +1,27 @@
-# Documentation technique mysql
+# Documentation database mysql
 
 ## Sommaire
+>- Objectifs
 >- Graph
->- Objectif
 >- Definition des providers
->- Ressource crées
->- Ressource mysql
+>- Ressources communes
+>- Ressources mysql
 >- Get it started
 
+---
+## Objectif
+---
 ## Graph
 ![graph.png](/mysql/images/graph.png)
+
+---
+## Definition des providers
+---
+## Ressources communes
+---
+## Ressources mysql
+---
+## Get it started
+---
+## a determiner
+
