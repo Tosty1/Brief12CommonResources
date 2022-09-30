@@ -1,6 +1,6 @@
 variable "resource_group_name" {
   type    = string
-  default = "perso-alain"
+  default = "Brief12CommonResources"
 }
 
 variable "resource_group_location" {
@@ -21,4 +21,23 @@ variable "admin_login" {
 variable "database_count" {
   type    = number
   default = 10
+}
+
+#Variables pour le groupe Storage
+
+variable "storage_account_name" {
+    default = "Brief12StorageAccount"
+    type    = string
+}
+
+variable "container_name_pfx" {
+  description = "Containers Names"
+  default     = "groupe"
+  type        = string
+}
+
+variable "container_count" {
+  description = "Number of container"
+  default     = 10
+  type        = number
 }
