@@ -2,7 +2,7 @@
 # Creation mysql server
 
 resource "azurerm_mysql_server" "p20cloud" {
-  name                = "${var.resource_pfx}-mysql"
+  name                = "${var.resource_pfx}mysql"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
 
@@ -140,7 +140,7 @@ resource "null_resource" "pourexporter" {
   }
   # alimentiation du fichier texte avec info superuser
   provisioner "local-exec" {
-    command = "echo 'Admin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=DigiCertGlobalRootG2.crt.pem' > infodb.txt"
+    command = "echo 'Server name    ${var.resource_pfx}mysql.mysql.database.azure.com\nAdmin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=BaltimoreCyberTrustRoot.crt.pem' > infodb.txt"
   }
 }
 #######################################################################
@@ -151,6 +151,6 @@ resource "null_resource" "mycert" {
     "always_on" = "${timestamp()}"
   }
   provisioner "local-exec" {
-    command = "curl https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt.pem > DigiCertGlobalRootG2.crt.pem"
+    command = "curl https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt.pem > BaltimoreCyberTrustRoot.crt.pem"
   }
 }
