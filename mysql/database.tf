@@ -140,7 +140,7 @@ resource "null_resource" "pourexporter" {
   }
   # alimentiation du fichier texte avec info superuser
   provisioner "local-exec" {
-    command = "echo 'Admin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=BaltimoreCyberTrustRoot.crt.pem' > infodb.txt"
+    command = "echo 'Server name    ${var.resource_pfx}mysql.mysql.database.azure.com\nAdmin-login ${var.admin_login}    Admin-password ${random_string.dbpassword[20].result}    certificat --ssl-ca=BaltimoreCyberTrustRoot.crt.pem' > infodb.txt"
   }
 }
 #######################################################################
