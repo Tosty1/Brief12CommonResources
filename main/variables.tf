@@ -1,6 +1,6 @@
 variable "resource_group_name" {
   type    = string
-  default = "Biref12CommonResources"
+  default = "perso-alain"
 }
 
 variable "resource_group_location" {
@@ -10,7 +10,7 @@ variable "resource_group_location" {
 
 variable "resource_pfx" {
   type    = string
-  default = "brief12"
+  default = "b12pa"
 }
 
 variable "admin_login" {
