@@ -38,4 +38,3 @@ variable "storage_account_name" {
 
 
 #variable pour le groupe MariaDB
- main
