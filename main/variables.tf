@@ -35,6 +35,7 @@ variable "queue_dev" {
   description = "Queue names"
 }
 
+# Variables des autorisations
 
 variable "autorisation_count" {
 
