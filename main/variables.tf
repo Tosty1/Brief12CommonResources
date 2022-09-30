@@ -34,7 +34,7 @@ variable "queue_dev" {
   description = "Queue names"
 }
 
-# Variables des autorisations
+git cherry-pick --abort# Variables des autorisations
 
 variable "autorisation_count" {
 
