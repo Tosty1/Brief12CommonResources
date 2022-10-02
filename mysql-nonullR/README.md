@@ -20,8 +20,10 @@ De ce fait les ressources suivantes seront générées :
 ### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
 
 Prerequis :
-	- avoir installé terraform [guide d'installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-	- pouvoir se connecter avec Azure cli avec `az login` [guide de connexion](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
+
+- avoir installé terraform [guide d'installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
+- pouvoir se connecter avec Azure cli avec `az login` [guide de connexion](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
 
 
 1. cloner ce repos : 
