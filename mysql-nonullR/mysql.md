@@ -34,7 +34,13 @@
     - source  = "petoju/mysql"
     - version = "3.0.20"
 
-- local = requis pour generer fichier localement
+- local = requis pour generer fichier local
+    - source = "hashicorp/local"
+    - version = "2.2.3"
+
+- http = download data http
+    - source = "hashicorp/http"
+    - version = "3.1.0"
 
 ---
 ## Ressources communes
