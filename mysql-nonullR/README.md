@@ -1,4 +1,4 @@
-# <center><img src="https://img.icons8.com/fluency/48/000000/azure-1.png"/> Azure common resources with Terraform<img src="https://img.icons8.com/fluency/48/000000/terraform.png"/></center>
+# <div style="test-align:center"><img src="https://img.icons8.com/fluency/48/000000/azure-1.png"/> Azure common resources with Terraform<img src="https://img.icons8.com/fluency/48/000000/terraform.png"/></div>
 
 ## Brief 12 - Partie 1 - un cloud pour la communauté
 
