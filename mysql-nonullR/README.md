@@ -2,7 +2,7 @@
 
 ## Brief 12 - Partie 1 - un cloud pour la communauté
 
-## Automatisation de la création de service bus, base de données mysql, container de stockage et service mail via Terraform. 
+### Automatisation de la création de service bus, base de données mysql, container de stockage et service mail via Terraform. 
 
 Ce projet prépare les ressources pour chaque binôme de la partie 2 du brief,  il y en aura 10.
 De ce fait les ressources suivantes seront générées :
@@ -14,10 +14,10 @@ De ce fait les ressources suivantes seront générées :
 
 
 ---
-## Visuel diagram, gif animé ou demo 
+### Visuel diagram, gif animé ou demo 
 
 ---
-## <img src="https://img.icons8.com/cotton/48/000000/settings--v1.png"/>	Guide d'installation
+### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
 
 Prerequis :
 	- avoir installé terraform [guide d'installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
@@ -25,7 +25,7 @@ Prerequis :
 
 
 1. cloner ce repos : 
-- `git clone https://github.com/P20CloudAzure/Brief12CommonResources.git`
+	- `git clone https://github.com/P20CloudAzure/Brief12CommonResources.git`
 2. Se rendre dans le dossier Brief12CommonResources
 3. S'assurer que les variables correspondent à vos besoins dans le fichier variables.tf
 4. Puis entrer les commandes terraform suivantes dans votre terminal, pour initialiser terraform, planifier et appliquer le plan:
@@ -42,12 +42,12 @@ Prerequis :
 6. Les ressources sont à votre disposition, pour plus de details, merci de suivre les liens vers les readme specifiques à chaque ressource, disponibles  un peu plus haut.
 
 ---
-## <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/000000/external-contribution-achievements-flaticons-lineal-color-flat-icons.png"/>Contributing
+### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-contribution-achievements-flaticons-lineal-color-flat-icons.png"/>Contributing
 - Ceci est un projet étudiant, les pull requests ne provenant pas des éléves du centre de formation sont refusées pour le moment. 
 - Merci d'ouvrir une issue en premier pour discuter les changement que vous voudriez apporter avant de pull request.
 
 ---
-## <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/45/000000/external-fire-extinguisher-wayfinding-flaticons-flat-flat-icons.png"/>Known issues (work in progress)
+### <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/40/000000/external-fire-extinguisher-wayfinding-flaticons-flat-flat-icons.png"/>Known issues (work in progress)
 
 C'est un projet en cours de developement.
 - Les resources sont crées sur azure, pour d'autre fournisseur cloud il faut modifier le code.
