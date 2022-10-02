@@ -19,7 +19,7 @@ De ce fait les ressources suivantes seront générées :
 ---
 ### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
 
-Prerequis :
+- Prerequis :
 
 	- avoir installé terraform [guide d'installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
