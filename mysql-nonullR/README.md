@@ -23,7 +23,7 @@ De ce fait les ressources suivantes seront générées :
 
 	- avoir installé terraform [guide d'installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-	- pouvoir se connecter avec Azure cli avec `az login` [guide de connexion](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
+	- pouvoir se connecter via Azure cli avec `az login` [guide de connexion](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
 
 
 1. cloner ce repos : 
