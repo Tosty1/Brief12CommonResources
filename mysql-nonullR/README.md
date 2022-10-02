@@ -2,7 +2,6 @@
 
 ## Brief 12 - Partie 1 - un cloud pour la communauté
 
----
 ## Automatisation de la création de service bus, base de données mysql, container de stockage et service mail via Terraform. 
 
 Ce projet prépare les ressources pour chaque binôme de la partie 2 du brief,  il y en aura 10.
