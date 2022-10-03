@@ -29,7 +29,7 @@ override.tf.json
 # example: *tfplan*
 
 # fichier avec info sensible
-infosDB.txt
+mariadb.txt
 
 #certificat
 DigiCertGlobalRootG2.*
