@@ -1,24 +1,46 @@
-variable "resource_group_name" {
+
+# serviceBus
+
+# variable pour le groupe service bus
+
+variable "servicebus_name" {
+
+  default = "brief12-ServiceBus"
   type    = string
-  default = "perso-alain"
+
 }
 
-variable "resource_group_location" {
-  type    = string
-  default = "westeurope"
+# Variable des Queues 
+
+variable "queue_count" {
+
+  default     = 10
+  type        = number
+  description = "Queue number"
+
 }
 
-variable "resource_pfx" {
-  type    = string
-  default = "b12pa"
+variable "queue_prod" {
+
+  default     = "Prod"
+  type        = string
+  description = "Queue names"
 }
 
-variable "admin_login" {
-  type    = string
-  default = "adminLogin1"
+
+variable "queue_dev" {
+
+  default     = "Dev"
+  type        = string
+  description = "Queue names"
 }
 
-variable "database_count" {
-  type    = number
-  default = 10
+# Variables des autorisations
+
+variable "autorisation_count" {
+
+  default     = 10
+  type        = number
+  description = "Autorisation number"
+
 }
