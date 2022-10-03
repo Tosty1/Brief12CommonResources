@@ -14,7 +14,7 @@ De ce fait les ressources suivantes seront générées :
 
 
 ---
-### Visuel diagram, gif animé ou demo 
+![diagram](/images/diagramv1.jpg)
 
 ---
 ### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
