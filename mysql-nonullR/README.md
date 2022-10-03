@@ -37,7 +37,7 @@ De ce fait les ressources suivantes seront générées :
 
 5. Après quelques minutes vos ressources auront été crées et votre dossier brief12CommonResources contiendra les fichiers d'informations supplémentaire suivants:
 	- storagebus.txt (contient clés ....)
-	- infosDB.txt (contient nom logins et pass utilisateurs )
+	- infosDB.txt (contient nom logins et pass utilisateurs mysql )
 	- mycert.crt.pem (certificat ssl pour la base de données)
 	- storage.txt (contient clés sas storage)
 	- sendgrid.txt (contier ....)
