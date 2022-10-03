@@ -10,7 +10,7 @@ variable "resource_group_location" {
 
 variable "resource_pfx" {
   type    = string
-  default = "b12paaaa"
+  default = "b12pa"
 }
 
 variable "admin_login" {
