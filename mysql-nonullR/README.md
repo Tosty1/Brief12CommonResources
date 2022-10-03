@@ -45,7 +45,7 @@ De ce fait les ressources suivantes seront générées :
 
 ---
 ### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-contribution-achievements-flaticons-lineal-color-flat-icons.png"/>Contributing
-- Ceci est un projet étudiant, les pull requests ne provenant pas des éléves du centre de formation sont refusées pour le moment. 
+- Ceci est un projet étudiant, les pull requests ne provenant pas des éléves de la promo 20 cloud Simplon sont refusées pour le moment. 
 - Merci d'ouvrir une issue en premier pour discuter les changement que vous voudriez apporter avant de pull request.
 
 ---
