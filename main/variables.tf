@@ -10,7 +10,7 @@ variable "resource_group_location" {
 
 variable "resource_pfx" {
   type    = string
-  default = "b12pa"
+  default = "b12paaaa"
 }
 
 variable "admin_login" {
@@ -26,7 +26,7 @@ variable "database_count" {
 #Variables pour le groupe Storage
 
 variable "storage_account_name" {
-    default = "Brief12StorageAccount"
+    default = "brief12storageaccount"
     type    = string
 }
 
