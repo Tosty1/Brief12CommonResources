@@ -8,7 +8,7 @@ Ce projet prépare les ressources pour chaque binôme de la partie 2 du brief,  
 De ce fait les ressources suivantes seront générées :
 
 * [10 queues de PROD et 10 queues de DEV dans le service bus](servicebus.md)
-* [10 bases de données de PROD et 10 base de données DEV avec chacune un utilisateur et un mot de passe propre](database.md)
+* [10 bases de données de PROD et 10 base de données DEV avec chacune un utilisateur et un mot de passe propre](mysql.md)
 * [10 container de stockage contenant chacun un répertoire PROD et DEV](storage.md)
 * [1 service d'envoi de MAIL Send Grid correctement configuré.](sendgrid.md)
 
@@ -36,11 +36,12 @@ De ce fait les ressources suivantes seront générées :
 	- `terraform apply --auto-approve`
 
 5. Après quelques minutes vos ressources auront été crées et votre dossier brief12CommonResources contiendra les fichiers d'informations supplémentaire suivants:
-		- storagebus.txt (contient clés ....)
-		- infosDB.txt (contient nom logins et pass utilisateurs )
-		- mycert.crt.pem (certificat ssl pour la base de données)
-		- storage.txt (contient clés sas storage)
-		- sendgrid.txt (contier ....)
+	- storagebus.txt (contient clés ....)
+	- infosDB.txt (contient nom logins et pass utilisateurs )
+	- mycert.crt.pem (certificat ssl pour la base de données)
+	- storage.txt (contient clés sas storage)
+	- sendgrid.txt (contier ....)
+	
 6. Les ressources sont à votre disposition, pour plus de details, merci de suivre les liens vers les readme specifiques à chaque ressource, disponibles  un peu plus haut.
 
 ---
