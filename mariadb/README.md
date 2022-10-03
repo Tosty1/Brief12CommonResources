@@ -14,7 +14,7 @@ De ce fait les ressources suivantes seront générées :
 
 
 ---
-![diagram](../images/diagramv1.jpg)
+![diagramv1](../images/diagramv1.jpg)
 
 ---
 ### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
