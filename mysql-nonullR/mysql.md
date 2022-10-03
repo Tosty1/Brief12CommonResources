@@ -73,8 +73,8 @@
 - resource "local_file" "export" x 2 &rarr; alternative au provisioner "local-exec" pour generer fichiers locaux d'infos et certificat
     - parsing du content à l'aide d'une boucle for et de conditions basées sur l'index du dbpassword
     - l'index 0 etant le password admin
-    - l'index <= 10 étant les login dev
-    - les autres étant les login prod
+    - les index <= 10 étant les logins dev
+    - les autres étant les logins prod
 
 ---
 ## Get it started
