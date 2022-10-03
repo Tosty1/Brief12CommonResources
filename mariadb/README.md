@@ -14,7 +14,7 @@ De ce fait les ressources suivantes seront générées :
 
 
 ---
-![diagramv1](../images/diagramv1.jpg)
+![diagram](https://github.com/P20CloudAzure/Brief12CommonResources/blob/mariadb/mariadb/images/diagramv1.jpg)
 
 ---
 ### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
