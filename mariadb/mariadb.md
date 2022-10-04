@@ -1,4 +1,4 @@
-# Documentation database mysql
+# Documentation database mariadb
 
 ## Sommaire
 >- Objectifs
@@ -83,8 +83,8 @@ terraform init
 terraform plan
 terraform apply --auto-approve
 ```
-- un fichier infosDB.txt est généré avec les informations de login, password et database.
+- un fichier mariadb.txt est généré avec les informations de login, password et database.
 - un certificat ssl mycert.crt.pem est généré localement
-- pour se connecter au serveur mysql en ligne de commande entrer la commande suivante dans le terminal:
+- pour se connecter au serveur mariadb en ligne de commande entrer la commande suivante dans le terminal:
 
 `mysql --user=<nom utilisateur> --password=<password> --host=<nom du serveur mariadb>.mariadb.database.azure.com --ssl-ca=<nom du certificat>`

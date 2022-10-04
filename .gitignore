@@ -29,9 +29,9 @@ override.tf.json
 # example: *tfplan*
 
 # fichier avec info sensible
-infosDB.txt
+*.txt
+**/*.txt
 
 #certificat
-DigiCertGlobalRootG2.*
-BaltimoreCyberTrustRoot.*
-mycert.crt.pem
+*.crt.pem
+**/*.crt.pem
