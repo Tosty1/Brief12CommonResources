@@ -64,12 +64,6 @@ data "azurerm_storage_account_blob_container_sas" "sas_key_gen" {
   content_type        = "application/json"
 }
 
-# Récupération depuis Azure des clés SAS de nos containers
-output "sas_url_query_string" {
-  value = data.azurerm_storage_account_blob_container_sas.sas_key_gen
-  sensitive = true
-}
-
 # Sauvegarde dans un fichier local des clés SAS de nos containers
 resource "local_sensitive_file" "cles_sas" {
   content  =  jsonencode(data.azurerm_storage_account_blob_container_sas.sas_key_gen[*])

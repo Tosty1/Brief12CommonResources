@@ -26,3 +26,7 @@ provider "mysql" {
   password = azurerm_mysql_server.p20cloud.administrator_login_password
   tls      = true
 }
+
+provider "local" {
+  # Configuration options
+}

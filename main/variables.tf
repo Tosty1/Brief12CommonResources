@@ -1,6 +1,6 @@
 variable "resource_group_name" {
   type    = string
-  default = "Brief12CommonResources"
+  default = "TestingCM"
 }
 
 variable "resource_group_location" {
@@ -10,7 +10,7 @@ variable "resource_group_location" {
 
 variable "resource_pfx" {
   type    = string
-  default = "b12pa"
+  default = "b12cr"
 }
 
 variable "admin_login" {
