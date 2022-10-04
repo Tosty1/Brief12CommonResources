@@ -65,7 +65,7 @@ MariaDB Server peut être utilisé pour gérer des données transactionnelles à
 >- Coordination du travail transactionnel qui nécessite un degré élevé de fiabilité
 >- Sur le portail Azure se rendre dans ...
 
-**SendGrid Twilio** est à l’origine un SMTP et une API de messagerie transactionnelle conçus pour les développeurs. Cependant, ils offrent maintenant aussi des fonctions de marketing par email. Vous pouvez donc les utiliser pour les deux.
+**SendGrid Twilio** est à l’origine un SMTP et une API de messagerie transactionnelle conçus pour les développeurs. Cependant, ils offrent maintenant aussi des fonctions de marketing par email.
 SendGrid dispose d’une période d’essai gratuite de 30 jours au cours de laquelle vous pouvez envoyer jusqu’à 40 000 emails. Après cela, vous pouvez continuer l’essai gratuit pour toujours et envoyer jusqu’à 100 emails par jour.
 Mais vous pouvez également passer à un plan supérieur pour économiser plus d’argent.
 Quelques avantages supplémentaires incluent :
@@ -74,7 +74,7 @@ Quelques avantages supplémentaires incluent :
 - Éliminez l’usurpation d’identité et l’hameçonnage des noms de domaine grâce à la création d’enregistrements SPF et DKIM personnalisés.
 - Bénéficiez d’un flux de courrier continu à travers nos centres de données sécurisés, distribués et redondants.
 - Logs en direct et consultables.
-
+>- Pour faire ceci faire cela ...
 
 
 
