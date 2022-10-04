@@ -47,25 +47,25 @@ De ce fait les ressources suivantes seront générées :
 ---
 ### <img src="https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/45/000000/external-interactive-networking-smashingstocks-outline-color-smashing-stocks.png"/>Utilisation
 
->**MariaDB Server** est un système de gestion de base de données relationnelle open source. C’est l’un des serveurs de bases de données les plus populaires au monde, avec des utilisateurs notables comme Wikipedia, WordPress.com et Google. MariaDB Server est publié sous licence open source GPLv2 ce qui apporte la garantie de rester open source.
->MariaDB Server peut être utilisé pour gérer des données transactionnelles à haute disponibilité, pour l’analyse de données ou comme serveur embarqué. MariaDB Server est supporté par une large gamme d’outils et d’applications.
+**MariaDB Server** est un système de gestion de base de données relationnelle open source.
+MariaDB Server peut être utilisé pour gérer des données transactionnelles à haute disponibilité, pour l’analyse de données ou comme serveur embarqué. MariaDB Server est supporté par une large gamme d’outils et d’applications.
 >- les informations de connexion à la base de données sont contenues dans le fichier généré localement mariadb.txt.
 >- pour se connecter au serveur mariadb en ligne de commande entrer la commande suivante dans le terminal:
 >`mysql --user=<nom utilisateur> --password=<password> --host=<nom du serveur mariadb>.mariadb.database.azure.com --ssl-ca=<nom du certificat>`
 
->**Storage Azure** est une solution de stockage cloud de Microsoft pour les scénarios de stockage de données actuels, il offre un stockage hautement disponible, hautement évolutif, durable et sécurisé pour divers objets de données du cloud.
+**Storage Azure** est une solution de stockage cloud de Microsoft pour les scénarios de stockage de données actuels, il offre un stockage hautement disponible, hautement évolutif, durable et sécurisé pour divers objets de données du cloud.
 >- Les objets de données du Stockage Azure sont accessibles depuis n’importe où dans le monde via http ou https via une API REST. 
 >- Le portail Azure et l’Explorateur Stockage Azure fournissent des outils d’interface utilisateur pour l’interaction avec le Stockage Azure.
 >- les clés SAS de connection et lien vers les conteneurs sont disponible dans le fichier storage.txt:
 >`https://<nom_compte_stockage>.blob.core.windows.net/<nom_conteneur><cle_sas>`
 
->**Service Bus Azure** est un répartiteur de messages d’entreprise complètement managé, avec des files d’attente de messages et des rubriques de publication/d’abonnement (dans un espace de noms). Service Bus est utilisé pour découpler les applications et les services les uns des autres pour offrir les avantages suivants :
+**Service Bus Azure** est un répartiteur de messages d’entreprise complètement managé, avec des files d’attente de messages et des rubriques de publication/d’abonnement (dans un espace de noms). Service Bus est utilisé pour découpler les applications et les services les uns des autres pour offrir les avantages suivants :
 >- Travail d’équilibrage de charge entre les workers concurrents
 >- Routage et transfert de façon sécurisée des données et du contrôle au-delà des limites des services et des applications
 >- Coordination du travail transactionnel qui nécessite un degré élevé de fiabilité
 >- Sur le portail Azure se rendre dans ...
 
->**SendGrid Twilio** est à l’origine un SMTP et une API de messagerie transactionnelle conçus pour les développeurs. Cependant, ils offrent maintenant aussi des fonctions de marketing par email. Vous pouvez donc les utiliser pour les deux.
+**SendGrid Twilio** est à l’origine un SMTP et une API de messagerie transactionnelle conçus pour les développeurs. Cependant, ils offrent maintenant aussi des fonctions de marketing par email. Vous pouvez donc les utiliser pour les deux.
 SendGrid dispose d’une période d’essai gratuite de 30 jours au cours de laquelle vous pouvez envoyer jusqu’à 40 000 emails. Après cela, vous pouvez continuer l’essai gratuit pour toujours et envoyer jusqu’à 100 emails par jour.
 Mais vous pouvez également passer à un plan supérieur pour économiser plus d’argent.
 Quelques avantages supplémentaires incluent :
