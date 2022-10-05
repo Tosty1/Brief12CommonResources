@@ -1,6 +1,6 @@
 variable "resource_group_name" {
   type    = string
-  default = "TestingCM"
+  default = "brief12generalproject"
 }
 
 variable "resource_group_location" {
@@ -11,7 +11,7 @@ variable "resource_group_location" {
 #variable pour le groupe MariaDB
 variable "resource_pfx" {
   type    = string
-  default = "testeml"
+  default = "groupbrief"
 }
 
 variable "admin_login" {

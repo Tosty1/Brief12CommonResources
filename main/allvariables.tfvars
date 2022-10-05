@@ -4,7 +4,7 @@ resource_group_location = "westeurope"
 
 
 #variable pour le groupe MariaDB
-resource_pfx = "testeml"
+resource_pfx = "groupbrief"
 
 admin_login = "adminLogin1"
 
