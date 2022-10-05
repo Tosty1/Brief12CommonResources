@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "sendgrid" {
-  api_key = var.api_to_completed
+  api_key = var.api_keyADMIN
   # Configuration options
 }

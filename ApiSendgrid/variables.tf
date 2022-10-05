@@ -1,11 +1,6 @@
 variable "api_keyADMIN" {
   type        = string
-  description = "api key admin pour le providers"
-}
-
-variable "api_to_completed" {
-  type =  string
-  description = "veuillez entrer votre clef d'api ADMIN:"
+  description = "Api keys admin a jouter pour l'auth a sendgrid"
 }
 
 variable "nameapi" {

@@ -1,11 +1,8 @@
-variable "api_key" {
-  type        = string
-  description = "api key récupérer"
-}
+
 
 variable "app_domain" {
   type        = string
-  description = "nom de domaine ajouté"
+  description = "nom de domaine a ajouté"
 }
 
 variable "resource_group_name" {
@@ -20,41 +17,15 @@ variable "resource_group_location" {
 
 }
 
-
-variable "dnsname1" {
+variable "client_secret" {
   type        = string
-  description = "nom dns zone 1"
-
+  description = "Entrée le client secret du tenant ou vous voulez déployer l'infra."
 }
 
-variable "dnsname2" {
+variable "api_keyADMIN" {
   type        = string
-  description = "nom dns zone 2"
-
+  description = "Api keys admin a jouter pour l'auth a sendgrid"
 }
 
-variable "dnsname3" {
-  type        = string
-  description = "nom dns zone 3"
-
-}
-
-variable "record1" {
-  type        = string
-  description = "recorder n.1"
-
-}
-
-variable "record2" {
-  type        = string
-  description = "recorder n.2"
-
-}
-
-variable "record3" {
-  type        = string
-  description = "recorder n.3"
-
-}
 
 
