@@ -81,11 +81,6 @@ data "azurerm_servicebus_queue_authorization_rule" "autorisationDev" {
   namespace_name      = var.servicebus_name
 }
 
-output "Dev" {
-  value = data.azurerm_servicebus_queue_authorization_rule.autorisationDev[*]
-  sensitive = true
-} 
-
 
 # Récupération des informations de l'nvironnement de production.
 
@@ -99,19 +94,14 @@ data "azurerm_servicebus_queue_authorization_rule" "autorisationProd" {
   namespace_name      = var.servicebus_name
 }
 
-output "Prod" {
-  value = data.azurerm_servicebus_queue_authorization_rule.autorisationProd[*]
-  sensitive = true
-}
-
 
 
 resource "local_sensitive_file" "Dev" {
-  content  = jsonencode(data.azurerm_servicebus_queue_authorization_rule.autorisationDev[*])
+  content  = yamlencode(data.azurerm_servicebus_queue_authorization_rule.autorisationDev[*])
   filename = "dev_data.txt"
 }
 
 resource "local_sensitive_file" "Prod" {
-  content  = jsonencode(data.azurerm_servicebus_queue_authorization_rule.autorisationProd[*])
+  content  = yamlencode(data.azurerm_servicebus_queue_authorization_rule.autorisationProd[*])
   filename = "prod_data.txt"
 }

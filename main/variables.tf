@@ -11,7 +11,7 @@ variable "resource_group_location" {
 #variable pour le groupe MariaDB
 variable "resource_pfx" {
   type    = string
-  default = "b12cr"
+  default = "testeml"
 }
 
 variable "admin_login" {

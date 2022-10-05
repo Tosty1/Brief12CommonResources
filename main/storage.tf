@@ -66,6 +66,6 @@ data "azurerm_storage_account_blob_container_sas" "sas_key_gen" {
 
 # Sauvegarde dans un fichier local des clés SAS de nos containers
 resource "local_sensitive_file" "cles_sas" {
-  content  =  jsonencode(data.azurerm_storage_account_blob_container_sas.sas_key_gen[*])
+  content  =  yamlencode(data.azurerm_storage_account_blob_container_sas.sas_key_gen[*])
   filename = "sas_keys.txt"
 }
