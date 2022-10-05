@@ -1,7 +1,7 @@
 # CommonResources
 variable "resource_group_name" {
   type    = string
-  default = "TestcdsmBrief12"
+  default = "Brief12CommonResources"
 }
 
 variable "resource_group_location" {
@@ -12,12 +12,12 @@ variable "resource_group_location" {
 #Variables pour le groupe Mariadb
 variable "resource_pfx" {
   type    = string
-  default = "testb12paaaa"
+  default = "b12paaaa"
 }
 
 variable "admin_login" {
   type    = string
-  default = "testadminLogin1"
+  default = "adminLogin1"
 }
 
 variable "database_count" {
@@ -28,13 +28,13 @@ variable "database_count" {
 #Variables pour le groupe Storage
 
 variable "storage_account_name" {
-    default = "testb12storageaccount"
+    default = "brief12storageaccount"
     type    = string
 }
 
 variable "container_name_pfx" {
   description = "Containers Names"
-  default     = "testgroupe"
+  default     = "groupe"
   type        = string
 }
 
@@ -44,11 +44,13 @@ variable "container_count" {
   type        = number
 }
 
+# serviceBus
+
 # variable pour le groupe service bus
 
 variable "servicebus_name" {
 
-  default = "testb12-ServiceBus"
+  default = "brief12-ServiceBus"
   type    = string
 
 }
