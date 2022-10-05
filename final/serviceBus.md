@@ -3,6 +3,8 @@
     **********************************************************************************************
     ************************************* #service bus ********************************************
     **********************************************************************************************
+    
+    <a href="https://github.com/P20CloudAzure/Brief12CommonResources/edit/serviceBus/main/final" target="_blank">Notre jolie travail de groupe</a>
 
     ##1 - La création de service bus 
     création de service bus avec script terraform
