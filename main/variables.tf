@@ -8,6 +8,7 @@ variable "resource_group_location" {
   default = "westeurope"
 }
 
+#variable pour le groupe MariaDB
 variable "resource_pfx" {
   type    = string
   default = "b12cr"
@@ -22,6 +23,7 @@ variable "database_count" {
   type    = number
   default = 10
 }
+
 
 #Variables pour le groupe Storage
 

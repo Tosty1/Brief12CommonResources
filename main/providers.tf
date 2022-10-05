@@ -21,9 +21,9 @@ provider "azurerm" {
 }
 
 provider "mysql" {
-  endpoint = "${var.resource_pfx}mysql.mysql.database.azure.com:3306"
-  username = "${azurerm_mysql_server.p20cloud.administrator_login}@${var.resource_pfx}mysql"
-  password = azurerm_mysql_server.p20cloud.administrator_login_password
+  endpoint = "${var.resource_pfx}mariadb.mariadb.database.azure.com:3306"
+  username = "${azurerm_mariadb_server.p20cloud.administrator_login}@${var.resource_pfx}mariadb"
+  password = azurerm_mariadb_server.p20cloud.administrator_login_password
   tls      = true
 }
 

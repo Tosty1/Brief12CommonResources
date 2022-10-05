@@ -1,7 +1,7 @@
 # Creation mysql server
 
-resource "azurerm_mysql_server" "p20cloud" {
-  name                = "${var.resource_pfx}mysql"
+resource "azurerm_mariadb_server" "p20cloud" {
+  name                = "${var.resource_pfx}mariadb"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
 
@@ -13,7 +13,7 @@ resource "azurerm_mysql_server" "p20cloud" {
 
   administrator_login          = var.admin_login
   administrator_login_password = random_password.dbpassword[0].result
-  version                      = "5.7"
+  version                      = "10.2"
   ssl_enforcement_enabled      = true
 
   depends_on = [azurerm_resource_group.p20cloud, random_password.dbpassword]
@@ -22,50 +22,50 @@ resource "azurerm_mysql_server" "p20cloud" {
 #######################################################################
 # Creation régles firewall
 
-resource "azurerm_mysql_firewall_rule" "p20cloud" {
+resource "azurerm_mariadb_firewall_rule" "p20cloud" {
   name                = "office_rule"
   resource_group_name = var.resource_group_name
-  server_name         = azurerm_mysql_server.p20cloud.name
+  server_name         = azurerm_mariadb_server.p20cloud.name
   start_ip_address    = data.http.myip.body
   end_ip_address      = data.http.myip.body
 
-  depends_on = [azurerm_mysql_server.p20cloud]
+  depends_on = [azurerm_mariadb_server.p20cloud]
 }
 
-resource "azurerm_mysql_firewall_rule" "p20cloud2" {
+resource "azurerm_mariadb_firewall_rule" "p20cloud2" {
   name                = "allow_access"
   resource_group_name = var.resource_group_name
-  server_name         = azurerm_mysql_server.p20cloud.name
+  server_name         = azurerm_mariadb_server.p20cloud.name
   start_ip_address    = "0.0.0.0"
   end_ip_address      = "0.0.0.0"
 
-  depends_on = [azurerm_mysql_server.p20cloud]
+  depends_on = [azurerm_mariadb_server.p20cloud]
 }
 
 #######################################################################
 # Creation de base de données mysql
 
-resource "azurerm_mysql_database" "p20clouddev" {
+resource "azurerm_mariadb_database" "p20clouddev" {
   name                = "${var.resource_pfx}dev${format("%02d", count.index + 1)}"
   resource_group_name = var.resource_group_name
   count               = var.database_count
-  server_name         = azurerm_mysql_server.p20cloud.name
+  server_name         = azurerm_mariadb_server.p20cloud.name
   charset             = "utf8"
   collation           = "utf8_unicode_520_ci"
 
 
-  depends_on = [azurerm_mysql_firewall_rule.p20cloud]
+  depends_on = [azurerm_mariadb_firewall_rule.p20cloud]
 }
-resource "azurerm_mysql_database" "p20cloudprod" {
+resource "azurerm_mariadb_database" "p20cloudprod" {
   name                = "${var.resource_pfx}prod${format("%02d", count.index + 1)}"
   resource_group_name = var.resource_group_name
   count               = var.database_count
-  server_name         = azurerm_mysql_server.p20cloud.name
+  server_name         = azurerm_mariadb_server.p20cloud.name
   charset             = "utf8"
   collation           = "utf8_unicode_520_ci"
 
 
-  depends_on = [azurerm_mysql_firewall_rule.p20cloud]
+  depends_on = [azurerm_mariadb_firewall_rule.p20cloud]
 }
 
 #######################################################################
@@ -77,7 +77,7 @@ resource "mysql_user" "p20clouddev" {
   plaintext_password = random_password.dbpassword[count.index + 1].result
   count              = var.database_count
 
-  depends_on = [azurerm_mysql_firewall_rule.p20cloud, random_password.dbpassword]
+  depends_on = [azurerm_mariadb_firewall_rule.p20cloud, random_password.dbpassword]
 }
 resource "mysql_user" "p20cloudprod" {
   user               = "${var.resource_pfx}produser${format("%02d", count.index + 1)}"
@@ -85,7 +85,7 @@ resource "mysql_user" "p20cloudprod" {
   plaintext_password = random_password.dbpassword[count.index + 11].result
   count              = var.database_count
 
-  depends_on = [azurerm_mysql_firewall_rule.p20cloud, random_password.dbpassword]
+  depends_on = [azurerm_mariadb_firewall_rule.p20cloud, random_password.dbpassword]
 }
 
 #######################################################################
@@ -98,7 +98,7 @@ resource "mysql_grant" "p20clouddev" {
   privileges = ["SELECT", "UPDATE", "DELETE", "EXECUTE", "INSERT", "CREATE"]
   count      = var.database_count
 
-  depends_on = [mysql_user.p20clouddev, azurerm_mysql_database.p20clouddev]
+  depends_on = [mysql_user.p20clouddev, azurerm_mariadb_database.p20clouddev]
 }
 
 resource "mysql_grant" "p20cloudprod" {
@@ -108,7 +108,7 @@ resource "mysql_grant" "p20cloudprod" {
   privileges = ["SELECT", "UPDATE", "DELETE", "EXECUTE", "INSERT", "CREATE"]
   count      = var.database_count
 
-  depends_on = [mysql_user.p20cloudprod, azurerm_mysql_database.p20cloudprod, mysql_grant.p20clouddev]
+  depends_on = [mysql_user.p20cloudprod, azurerm_mariadb_database.p20cloudprod, mysql_grant.p20clouddev]
 }
 
 #######################################################################
@@ -136,11 +136,11 @@ resource "local_sensitive_file" "export" {
   content = yamlencode(
     [for elem in random_password.dbpassword[*].result :
       index(random_password.dbpassword[*].result, elem) == 0 ?
-      "server = ${var.resource_pfx}mysql.mysql.database.azure.com   certificat = mycert.crt.pem   admin-login = ${var.admin_login}   admin-password = ${random_password.dbpassword[0].result}" :
+      "server = ${var.resource_pfx}mariadb.mariadb.database.azure.com   certificat = mycert.crt.pem   admin-login = ${var.admin_login}   admin-password = ${random_password.dbpassword[0].result}" :
       index(random_password.dbpassword[*].result, elem) <= 10 ?
       "login = ${var.resource_pfx}devuser${format("%02d", index(random_password.dbpassword[*].result, elem))}   password = ${elem}   database = ${var.resource_pfx}dev${format("%02d", index(random_password.dbpassword[*].result, elem))}" :
       "login = ${var.resource_pfx}produser${format("%02d", index(random_password.dbpassword[*].result, elem) - 10)}   password = ${elem}   database = ${var.resource_pfx}prod${format("%02d", index(random_password.dbpassword[*].result, elem) - 10)}"
     ]
   )
-  filename = "infosDB.txt"
+  filename = "mariadb.txt"
 }
