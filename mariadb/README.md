@@ -89,3 +89,4 @@ Quelques avantages supplémentaires incluent :
 C'est un projet en cours de developement.
 - Les resources sont crées sur azure, pour d'autre fournisseur cloud il faut modifier le code.
 - La sécurisation des données via l'utilisation d'un keyvault reste à faire.
+- La connexion au serveur de base de données ne se fait pas : veillez à indiquer le bon chemin vers le certificat ssl téléchargé dans la commande de connexion.
