@@ -12,7 +12,7 @@ output "outputapi" {
 
  resource "local_file" "ma_cle_api" {
   content  =  jsonencode(resource.sendgrid_api_key.api_key[*])
-  filename = "api_key.txt"
+  filename = "Sendgrid.txt"
 }  
 
 
