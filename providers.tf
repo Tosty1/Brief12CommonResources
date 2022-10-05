@@ -12,7 +12,15 @@ terraform {
       source  = "petoju/mysql"
       version = "3.0.20"
     }
+    sendgrid = {
+    source  = "Trois-Six/sendgrid"
+    version = "0.2.1"
+    }
   }
+}
+provider "sendgrid" {
+  api_key = var.api_to_completed
+  # Configuration options
 }
 
 provider "azurerm" {
@@ -28,19 +36,5 @@ provider "mysql" {
 }
 
 provider "local" {
-  # Configuration options
-}
-
-terraform {
-  required_providers {
-    sendgrid = {
-      source  = "Trois-Six/sendgrid"
-      version = "0.2.1"
-    }
-  }
-}
-
-provider "sendgrid" {
-  api_key = var.api_to_completed
   # Configuration options
 }
