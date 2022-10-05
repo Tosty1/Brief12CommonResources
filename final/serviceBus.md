@@ -11,7 +11,7 @@
 
 1. Création des ressources :
    - El Mahdi, Aïcha et B2oba
-2. Gestion de la partie <p> Versioning </p>:
+2. Gestion de la partie <p> Versioning :</p>
    - Loïc et el Bilali
 
 
