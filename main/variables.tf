@@ -42,19 +42,49 @@ variable "container_count" {
   type        = number
 }
 
-#serviceBus
-#variable pour le groupe service bus
 
-variable "servicebus_namespace" {
+# serviceBus
 
-  default = "brief12-servicebus"
+# variable pour le groupe service bus
+
+variable "servicebus_name" {
+
+  default = "brief12-ServiceBus"
+  type    = string
 
 }
-#Variables pour le groupe Storage
-variable "storage_container_name" {
-    default = "Brief12StorageContainer"
+
+# Variable des Queues 
+
+variable "queue_count" {
+
+  default     = 10
+  type        = number
+  description = "Queue number"
+
 }
 
-variable "storage_account_name" {
-    default = "Brief12StorageAccount"
+variable "queue_prod" {
+
+  default     = "Prod"
+  type        = string
+  description = "Queue names"
+}
+
+
+variable "queue_dev" {
+
+  default     = "Dev"
+  type        = string
+  description = "Queue names"
+}
+
+# Variables des autorisations
+
+variable "autorisation_count" {
+
+  default     = 10
+  type        = number
+  description = "Autorisation number"
+
 }
