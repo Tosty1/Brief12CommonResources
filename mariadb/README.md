@@ -7,7 +7,7 @@
 Ce projet prépare les ressources pour chaque binôme de la partie 2 du brief,  il y en aura 10.
 De ce fait les ressources suivantes seront générées :
 
-* [10 queues de PROD et 10 queues de DEV dans le service bus](servicebus.md)
+* [10 queues de PROD et 10 queues de DEV dans le service bus](serviceBus.md)
 * [10 bases de données de PROD et 10 base de données DEV avec chacune un utilisateur et un mot de passe propre](mariadb.md)
 * [10 container de stockage contenant chacun un répertoire PROD et DEV](storage.md)
 * [1 service d'envoi de MAIL Send Grid correctement configuré.](sendgrid.md)
