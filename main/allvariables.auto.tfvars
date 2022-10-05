@@ -1,4 +1,4 @@
-resource_group_name = "Matomitet"
+resource_group_name = "brief12generalproject"
 
 resource_group_location = "westeurope"
 
