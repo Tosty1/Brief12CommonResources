@@ -1,1 +1,0 @@
-[{"api_key":"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","id":"cwr-AH3WQByjwIrtYnQ9Tg","name":"alaintest","scopes":["api_keys.create","api_keys.delete","api_keys.read","api_keys.update","mail.batch.create","mail.batch.delete","mail.batch.read","mail.batch.update","mail.send"]}]
