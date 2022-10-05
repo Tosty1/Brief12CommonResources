@@ -2,10 +2,10 @@
 <a href="https://github.com/P20CloudAzure/Brief12CommonResources/blob/serviceBus/final" target="_blank">Notre jolie travail de groupe</a>
 
     **********************************************************************************************
-    ************************************* #service bus ********************************************
+    ************************************* service bus ********************************************
     **********************************************************************************************
     
-    # Groupe <p> serviceBus </p> avec les <p> Queues </p>
+     Groupe <p> serviceBus </p> avec les <p> Queues </p>
 
 ## Répartitions des tâches :
 
