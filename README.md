@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ##pré-réquis:
 -Api key ADMIN à rajouter dans les config du providers (Sendgrid)
 
@@ -13,7 +13,7 @@
 
 
 # buy a domain name
->>>>>>> 9c0cff03948588bb18a4e3edb9c18c96500072e7
+
 
 ![1.png](https://raw.githubusercontent.com/P20CloudAzure/Brief12CommonResources/Sendgrid/images/1.png)
 
@@ -70,3 +70,6 @@
 
 
 ![13.png](https://github.com/P20CloudAzure/Brief12CommonResources/blob/Sendgrid/images/13.png?raw=true)
+=======
+# Brief12CommonResources
+
