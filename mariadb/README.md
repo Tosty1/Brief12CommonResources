@@ -14,7 +14,7 @@ De ce fait les ressources suivantes seront générées :
 
 
 ---
-### <p align="center">![diagram](/mariadb/images/diagramv1.jpg)</p>
+### <p align="center">![diagram](/images/diagramv1.jpg)</p>
 
 ---
 ### <img src="https://img.icons8.com/cotton/40/000000/settings--v1.png"/>	Guide d'installation
