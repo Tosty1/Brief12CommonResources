@@ -48,7 +48,7 @@ variable "container_count" {
 
 variable "servicebus_name" {
 
-  default = "testbrief12-ServiceBus"
+  default = "testb12-ServiceBus"
   type    = string
 
 }
@@ -65,7 +65,7 @@ variable "queue_count" {
 
 variable "queue_prod" {
 
-  default     = "testProd"
+  default     = "Prod"
   type        = string
   description = "Queue names"
 }
@@ -73,8 +73,18 @@ variable "queue_prod" {
 
 variable "queue_dev" {
 
-  default     = "testDev"
+  default     = "Dev"
   type        = string
   description = "Queue names"
+}
+
+# Variables des autorisations
+
+variable "autorisation_count" {
+
+  default     = 10
+  type        = number
+  description = "Autorisation number"
+
 }
 

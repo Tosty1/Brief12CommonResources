@@ -1,5 +1,6 @@
 # Création d'un service Bus
 
+
 resource "azurerm_servicebus_namespace" "servicebusGroup" {
   depends_on          = [azurerm_resource_group.p20cloud]
   name                = var.servicebus_name
