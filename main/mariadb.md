@@ -5,7 +5,7 @@
 >- Graph
 >- Definition des providers
 >- Ressources communes
->- Ressources mysql
+>- Ressources database
 >- Ressources diverses
 >- Get it started
 

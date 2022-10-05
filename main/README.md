@@ -25,6 +25,8 @@ De ce fait les ressources suivantes seront générées :
 
 	- pouvoir se connecter via Azure cli avec `az login` [guide de connexion](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
 
+	- pour Sendgrid, avoir un Service Principal pour l'achat du dns. [Creer un service principal azure](https://learn.microsoft.com/fr-fr/azure/active-directory/develop/howto-create-service-principal-portal)
+
 
 1. cloner ce repos : 
 	- `git clone https://github.com/P20CloudAzure/Brief12CommonResources.git`
@@ -52,18 +54,21 @@ MariaDB Server peut être utilisé pour gérer des données transactionnelles à
 >- les informations de connexion à la base de données sont contenues dans le fichier généré localement mariadb.txt.
 >- pour se connecter au serveur mariadb en ligne de commande entrer la commande suivante dans le terminal:
 >`mysql --user=<nom utilisateur> --password=<password> --host=<nom du serveur mariadb>.mariadb.database.azure.com --ssl-ca=<nom du certificat>`
+>- [mariadb.md](mariadb.md)
 
 **Storage Azure** est une solution de stockage cloud de Microsoft pour les scénarios de stockage de données actuels, il offre un stockage hautement disponible, hautement évolutif, durable et sécurisé pour divers objets de données du cloud.
 >- Les objets de données du Stockage Azure sont accessibles depuis n’importe où dans le monde via http ou https via une API REST. 
 >- Le portail Azure et l’Explorateur Stockage Azure fournissent des outils d’interface utilisateur pour l’interaction avec le Stockage Azure.
 >- les clés SAS de connection et lien vers les conteneurs sont disponible dans le fichier storage.txt:
 >`https://<nom_compte_stockage>.blob.core.windows.net/<nom_conteneur><cle_sas>`
+>- [storage.md](storage.md)
 
 **Service Bus Azure** est un répartiteur de messages d’entreprise complètement managé, avec des files d’attente de messages et des rubriques de publication/d’abonnement (dans un espace de noms). Service Bus est utilisé pour découpler les applications et les services les uns des autres pour offrir les avantages suivants :
->- Travail d’équilibrage de charge entre les workers concurrents
->- Routage et transfert de façon sécurisée des données et du contrôle au-delà des limites des services et des applications
->- Coordination du travail transactionnel qui nécessite un degré élevé de fiabilité
->- Sur le portail Azure se rendre dans ...
+- Travail d’équilibrage de charge entre les workers concurrents
+- Routage et transfert de façon sécurisée des données et du contrôle au-delà des limites des services et des applications
+- Coordination du travail transactionnel qui nécessite un degré élevé de fiabilité
+>- Les autorisations pour chaque queue crées pour "send" et "listen" sont dans le fichier serviceBus.txt.
+>- [serviceBus.md](serviceBus.md)
 
 **SendGrid Twilio** est à l’origine un SMTP et une API de messagerie transactionnelle conçus pour les développeurs. Cependant, ils offrent maintenant aussi des fonctions de marketing par email.
 SendGrid dispose d’une période d’essai gratuite de 30 jours au cours de laquelle vous pouvez envoyer jusqu’à 40 000 emails. Après cela, vous pouvez continuer l’essai gratuit pour toujours et envoyer jusqu’à 100 emails par jour.
@@ -74,7 +79,8 @@ Quelques avantages supplémentaires incluent :
 - Éliminez l’usurpation d’identité et l’hameçonnage des noms de domaine grâce à la création d’enregistrements SPF et DKIM personnalisés.
 - Bénéficiez d’un flux de courrier continu à travers nos centres de données sécurisés, distribués et redondants.
 - Logs en direct et consultables.
->- Pour faire ceci faire cela ...
+ >- Pour utiliser Sendgrid il faut avoir un Nom de Domaine où seront stockés les noms et records pour authentification de domaine . La clé d'accés au service Sendgrid sera disponible dans le fichier sendgrid.txt. Pour plus d'information voir le fichier [sendgrid.md](sendgrid.md) et la [doc api sendgrid](https://docs.sendgrid.com/api-reference/mail-send/mail-send).
+
 
 
 
