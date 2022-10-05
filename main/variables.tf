@@ -90,3 +90,22 @@ variable "autorisation_count" {
   description = "Autorisation number"
 
 }
+
+
+
+# sendgrid
+
+variable "app_domain" {
+  type        = string
+  description = "nom de domaine a ajouté"
+}
+
+variable "client_secret" {
+  type        = string
+  description = "Entrée le client secret du tenant ou vous voulez déployer l'infra."
+}
+
+variable "api_keyADMIN" {
+  type        = string
+  description = "Api keys admin a jouter pour l'auth a sendgrid"
+}
