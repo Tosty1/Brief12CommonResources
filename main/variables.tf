@@ -41,3 +41,20 @@ variable "container_count" {
   default     = 10
   type        = number
 }
+
+#serviceBus
+#variable pour le groupe service bus
+
+variable "servicebus_namespace" {
+
+  default = "brief12-servicebus"
+
+}
+#Variables pour le groupe Storage
+variable "storage_container_name" {
+    default = "Brief12StorageContainer"
+}
+
+variable "storage_account_name" {
+    default = "Brief12StorageAccount"
+}
